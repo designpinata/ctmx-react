@@ -1,0 +1,6 @@
+@import './Utils/settings.css';
+@import './Utils/reset.css';
+
+@import './Typography/typography.css';
+
+@import './Pages/global.css';

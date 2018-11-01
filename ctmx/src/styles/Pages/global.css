@@ -1,0 +1,7 @@
+body {
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: var(--16);
+    -webkit-text-size-adjust: 100%;
+}
