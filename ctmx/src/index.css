@@ -52,32 +52,32 @@ table {
 }
 @font-face {
     font-family: 'Lato';
-    src: url('fonts/lato-black-webfont.woff2') format('woff2'),
-         url('fonts/lato-black-webfont.woff') format('woff');
+    src: url('assets/fonts/lato-black-webfont.woff2') format('woff2'),
+         url('assets/fonts/lato-black-webfont.woff') format('woff');
     font-weight: bolder;
     font-style: normal;
 
 }
 @font-face {
     font-family: 'Lato';
-    src: url('fonts/lato-bold-webfont.woff2') format('woff2'),
-         url('fonts/lato-bold-webfont.woff') format('woff');
+    src: url('assets/fonts/lato-bold-webfont.woff2') format('woff2'),
+         url('assets/fonts/lato-bold-webfont.woff') format('woff');
     font-weight: bold;
     font-style: normal;
 
 }
 @font-face {
     font-family: 'Lato';
-    src: url('fonts/lato-medium-webfont.woff2') format('woff2'),
-         url('fonts/lato-medium-webfont.woff') format('woff');
+    src: url('assets/fonts/lato-medium-webfont.woff2') format('woff2'),
+         url('assets/fonts/lato-medium-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
 }
 @font-face {
     font-family: 'Signika';
-    src: url('fonts/signika-bold-webfont.woff2') format('woff2'),
-         url('fonts/signika-bold-webfont.woff') format('woff');
+    src: url('assets/fonts/signika-bold-webfont.woff2') format('woff2'),
+         url('assets/fonts/signika-bold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -140,9 +140,22 @@ h3 {
     font-weight: bolder;
 }
 body {
-    min-height: 100vh;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-size: var(--16);
     -webkit-text-size-adjust: 100%;
 }
+.loader {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+            justify-content: center;
+    min-height: 100vh;
+}
+.loader img {
+        height: calc(var(--16)*4);
+        width: auto;
+        display: inline-block;
+    }
