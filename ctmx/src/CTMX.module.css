@@ -2,6 +2,8 @@
     --primary-font: 'Signika', sans-serif;
     --secondary-font: 'Lato', sans-serif;
     --16: 16px;
+
+    --white : #fff;
 }
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -52,32 +54,32 @@ table {
 }
 @font-face {
     font-family: 'Lato';
-    src: url('assets/fonts/lato-black-webfont.woff2') format('woff2'),
-         url('assets/fonts/lato-black-webfont.woff') format('woff');
+    src: url('./assets/fonts/lato-black-webfont.woff2') format('woff2'),
+         url('./assets/fonts/lato-black-webfont.woff') format('woff');
     font-weight: bolder;
     font-style: normal;
 
 }
 @font-face {
     font-family: 'Lato';
-    src: url('assets/fonts/lato-bold-webfont.woff2') format('woff2'),
-         url('assets/fonts/lato-bold-webfont.woff') format('woff');
+    src: url('./assets/fonts/lato-bold-webfont.woff2') format('woff2'),
+         url('./assets/fonts/lato-bold-webfont.woff') format('woff');
     font-weight: bold;
     font-style: normal;
 
 }
 @font-face {
     font-family: 'Lato';
-    src: url('assets/fonts/lato-medium-webfont.woff2') format('woff2'),
-         url('assets/fonts/lato-medium-webfont.woff') format('woff');
+    src: url('./assets/fonts/lato-medium-webfont.woff2') format('woff2'),
+         url('./assets/fonts/lato-medium-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
 }
 @font-face {
     font-family: 'Signika';
-    src: url('assets/fonts/signika-bold-webfont.woff2') format('woff2'),
-         url('assets/fonts/signika-bold-webfont.woff') format('woff');
+    src: url('./assets/fonts/signika-bold-webfont.woff2') format('woff2'),
+         url('./assets/fonts/signika-bold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -139,12 +141,6 @@ h3 {
     text-align: left;
     font-weight: bolder;
 }
-body {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-size: var(--16);
-    -webkit-text-size-adjust: 100%;
-}
 .loader {
     display: -webkit-box;
     display: flex;
@@ -152,10 +148,29 @@ body {
             align-items: center;
     -webkit-box-pack: center;
             justify-content: center;
-    min-height: 100vh;
+    width: 100vw;
+    height: 100vh;
+    background: #fff;
+    background: var(--white);
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    -webkit-transition: opacity ease-in 300ms;
+    transition: opacity ease-in 300ms;
+    will-change: opacity;
 }
-.loader img {
+.loader__brand {
         height: calc(var(--16)*4);
         width: auto;
         display: inline-block;
     }
+.loader.is_active {
+        opacity: 1;
+    }
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: var(--16);
+    -webkit-text-size-adjust: 100%;
+}

@@ -3,4 +3,6 @@
 
 @import './Typography/typography.css';
 
+@import './Molecules/loader.css';
+
 @import './Pages/global.css';
